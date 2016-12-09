@@ -5,4 +5,68 @@
 
 body {
   font-family: monospace;
+  color: grey;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  font-family: 'Inconsolata', monospace;
+  background: #6EBED7;
+  color: white;
+  padding-bottom: 40px;
+}
+
+header h1 {
+  font-size: 50px;
+  letter-spacing: 2.6px;
+  padding: 10px 30px;
+  background: grey;
+}
+
+header h2 {
+  font-size: 25px;
+  letter-spacing: 1.6px;
+  padding: 10px 40px;
+}
+
+header a {
+  color: #d4d4d4;
+  padding: 10px 0 10px 50px;;
+}
+
+.table-wrapper {
+  margin: 30px;
+}
+
+table th {
+  font-size: 16px;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+  border-right: 2px dotted grey;
+  padding: 20px 10px;
+}
+
+table th:first-child {
+  border-left: 2px dotted grey;
+}
+
+table td {
+  font-size: 14px;
+  padding: 4px 4px 4px 10px;
+  text-align: left;
+  border-bottom: 2px solid grey;
+  border-right: 2px dotted grey;
+}
+
+table td:first-child {
+  border-left: 2px dotted grey;
+}
+
+table td:nth-child(n+3) {
+  font-size: 16px;
+  text-align: right;
+  padding-right: 25px;
 }
