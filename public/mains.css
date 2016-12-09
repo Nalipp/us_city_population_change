@@ -53,6 +53,10 @@ table th:first-child {
   border-left: 2px dotted grey;
 }
 
+table th:nth-child(6) {
+  padding: 3px;
+}
+
 table td {
   font-size: 14px;
   padding: 4px 4px 4px 10px;
@@ -69,4 +73,9 @@ table td:nth-child(n+3) {
   font-size: 16px;
   text-align: right;
   padding-right: 25px;
+}
+
+footer {
+  background: grey;
+  height: 100px
 }

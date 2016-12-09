@@ -15,6 +15,10 @@ configure(:development) do
   also_reload "sequel_persistence.rb"
 end
 
+before do
+  @storage = SequelPersistence.new(logger)
+end
+
 get "/" do
   redirect "/query_results"
 end
