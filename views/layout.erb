@@ -16,21 +16,21 @@
       <p><a href="http://www.census.gov/popest/data/metro/totals/2015/index.html" target="_blank">download</a> the source data</p>
     </header>
     <section role="main" class="main">
-  <div class="form-wrapper">
-    <form class="checkbox" action="query_results" method="post">
-      <label><a><input type="checkbox" name="less_than_500k"> < 500k people</a></label>
-      <label><a><input type="checkbox" name="between_500k_1mil"> 500k - 1mil people</a></label>
-      <label><a><input type="checkbox" name="between_1mil_3mil"> 1mil - 3mil people</a></label>
-      <label><a><input type="checkbox" name="more_than_3mil"> 3mil+ people</a></label>
-      <br />
-      <button type="submit">Submit</button>
-      <form action="query_results" method="post">
-        <button type="submit">Reset</button>
-      </form>
-    </form>
-  </div>
-</section>
-    <%== yield %>
+      <div class="form-wrapper">
+        <form class="checkbox" action="query_results" method="post">
+          <label><a><input type="checkbox" name="less_than_500k"> < 500k people</a></label>
+          <label><a><input type="checkbox" name="between_500k_1mil"> 500k - 1mil people</a></label>
+          <label><a><input type="checkbox" name="between_1mil_3mil"> 1mil - 3mil people</a></label>
+          <label><a><input type="checkbox" name="more_than_3mil"> 3mil+ people</a></label>
+          <br />
+          <button type="submit">Submit</button>
+          <form action="query_results" method="post">
+            <button type="submit">Reset</button>
+          </form>
+        </form>
+      </div>
+      <%== yield %>
+    </section>
     <footer></footer>
   </body>
 </html>
