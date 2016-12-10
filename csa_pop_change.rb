@@ -1,3 +1,5 @@
+require "pry"
+
 require "sinatra"
 require "sinatra/content_for"
 require "tilt/erubis"
@@ -24,5 +26,20 @@ get "/" do
 end
 
 get "/query_results" do
+  @populations = @storage.all_populatations
+  erb :query_results, layout: :layout
+end
+
+post "/query_results" do
+  unless params.empty?
+    @populations = @storage.select_populations(params)
+  else
+    @populations = @storage.all_populatations
+  end
+  erb :query_results, layout: :layout
+end
+
+post "/reset" do
+  @populations = @storage.all_populatations
   erb :query_results, layout: :layout
 end

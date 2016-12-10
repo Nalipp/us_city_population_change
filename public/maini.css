@@ -37,6 +37,35 @@ header a {
   padding: 10px 0 10px 50px;;
 }
 
+.form-wrapper {
+  margin: 30px;
+  text-align: center;
+}
+
+label a {
+  font-size: 20px;
+  padding: 10px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  margin: 10px;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+button {
+  font-size: 20px;
+  margin: 50px 10px 10px 10px;
+  padding: 20px 60px;
+  border: none;
+  color: grey;
+  border-radius: 30px;
+  background: #d4d4d4;
+}
+
 .table-wrapper {
   margin: 30px;
 }
@@ -73,6 +102,13 @@ table td:nth-child(n+3) {
   font-size: 16px;
   text-align: right;
   padding-right: 25px;
+}
+
+/* tablesorter  jQuery plugin http://tablesorter.com/docs/#Download */
+
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+  background-color: #6EBED7;
+  color: white;
 }
 
 footer {

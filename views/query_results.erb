@@ -6,23 +6,27 @@
         <th>state</th>
         <th>total population</th>
         <th>population change</th>
-        <th>natural increase</th>
+        <th>%</th>
         <th>international migration</th>
+        <th>%</th>
         <th>domestic migration</th>
-        <th>percent change</th>
+        <th>%</th>
+        <th>natural %</th>
       </tr>
     </thead>
     <tbody>
-      <% @storage.all_populatations.each do |row| %>
+      <% @populations.each do |row| %>
         <tr>
           <td><%= row[:geo_area] %></td>
           <td><%= row[:state].split(' ').first %></td>
           <td><%= row[:tot_pop] %></td>
           <td><%= row[:tot_pop_change] %></td>
-          <td><%= row[:natural_increase] %></td>
+          <td><%= (row[:tot_pop_change].to_f / row[:tot_pop].to_f * 100).round(2) %></td>
           <td><%= row[:net_int_mig] %></td>
+          <td><%= (row[:net_int_mig].to_f / row[:tot_pop].to_f * 100).round(2) %></td>
           <td><%= row[:net_domestic_mig] %></td>
-          <td></td>
+          <td><%= (row[:net_domestic_mig].to_f / row[:tot_pop].to_f * 100).round(2) %></td>
+          <td><%= (row[:natural_increase].to_f / row[:tot_pop].to_f * 100).round(2) %></td>
         </tr>
       <% end %>
     </tbody>

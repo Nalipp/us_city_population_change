@@ -3,15 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>CSA Metro Area Sortable Population Data</title>
-    <link rel="stylesheet" href="/mains.css">
+    <link rel="stylesheet" href="/maini.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <script type="text/javascript" src="/javascripts/jquery.js"></script>
+    <script type="text/javascript" src="/javascripts/tablesorter/jquery.tablesorter.js"></script>
+    <script src="javascripts/tablesorter.js"></script>
   </head>
   <body>
     <header>
       <h1>US Population change</h1>
       <h2>CSA Metro Area sortable data</h2>
-      <p><a href="http://www.census.gov/popest/data/metro/totals/2015/index.html" target="_blank">download</a> the original data</p>
+      <p><a href="http://www.census.gov/popest/data/metro/totals/2015/index.html" target="_blank">download</a> the source data</p>
     </header>
+    <section role="main" class="main">
+  <div class="form-wrapper">
+    <form class="checkbox" action="query_results" method="post">
+      <label><a><input type="checkbox" name="less_than_500k"> < 500k people</a></label>
+      <label><a><input type="checkbox" name="between_500k_1mil"> 500k - 1mil people</a></label>
+      <label><a><input type="checkbox" name="between_1mil_3mil"> 1mil - 3mil people</a></label>
+      <label><a><input type="checkbox" name="more_than_3mil"> 3mil+ people</a></label>
+      <br />
+      <button type="submit">Submit</button>
+      <form action="query_results" method="post">
+        <button type="submit">Reset</button>
+      </form>
+    </form>
+  </div>
+</section>
     <%== yield %>
     <footer></footer>
   </body>
